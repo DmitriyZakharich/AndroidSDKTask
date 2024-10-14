@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity(), Router {
         }
     }
 
+    /**Task 2 WorkManager*/
     private fun setupWorkManager() {
         val constraints = Constraints.Builder()
             .setRequiresCharging(true)
@@ -86,7 +87,7 @@ class MainActivity : AppCompatActivity(), Router {
         WorkManager.getInstance(applicationContext).enqueue(workRequest)
 
     }
-
+    /**Task 1 Router*/
     override fun navigateToNext(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
